@@ -1,26 +1,13 @@
 <?php
 
-	class Prowl {
-	
-		private $username;
-		private $password;
-		private $application;
-	
-		public function __construct($username = "", $password = "", $application = 'PHP Prowl') {
-			
-			$this->application	= $application;
-            $this->username		= $username;
-            $this->password		= $password;
-        }
-        
-		public function send($event, $description) {
+		function prowl($apikey, $application, $event, $description, $priority, $url) {
 		
-			$url = "https://prowl.weks.net/api/add_notification.php?application=". urlencode($this->application)  ."&event=". urlencode($event) ."&description=". urlencode($description);
+			$url = "https://api.prowlapp.com/publicapi/add?apikey=". urlencode($apikey) . "&priority=" . urlencode($priority) . "&application=" . urlencode($application) . "&event=" . urlencode($event) . "&description=" . urlencode($description) . "&url=" . urlencode($url) ;
 		
 			$ch = curl_init($url);
 					
-			curl_setopt($ch, CURLOPT_USERPWD, $this->username .":". $this->password);
-			curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+			//curl_setopt($ch, CURLOPT_USERPWD, $this->username .":". $this->password);
+			//curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 			
 			curl_setopt($ch, CURLOPT_POST, true);
@@ -55,7 +42,6 @@
 						"error" => "",
 						"error_code" => "");
 		}
-	
-	};
+
 	
 ?>
