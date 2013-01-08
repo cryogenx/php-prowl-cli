@@ -11,7 +11,7 @@
 class Prowl
 {
 	private $api_root = "https://api.prowlapp.com/publicapi/";
-	private $user_agent = "php-prowl <http://dor.ky>";
+	private $user_agent = "php-prowl-cli <http://gwelsted.com>";
 	private $api_key = null;
 	private $api_provider_key = null;
 	private $request_method = "GET";
