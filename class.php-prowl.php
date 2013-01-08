@@ -4,7 +4,8 @@
  *
  * This class provides a simple mechanism for interacting with the prowlapp.com
  * API service for pushing notifications to iOS devices.
- * @author Scott Wilcox <scott@dor.ky>
+ * original class by: Scott Wilcox <scott@dor.ky> cli modifications by: George Welsted
+ * @author George Welsted <george@gwelsted.com>
  * @version 0.1
  * @package php-prowl	
  */
@@ -54,7 +55,7 @@ class Prowl
 		}
 	}
 
-	public function add($application = "php-prowl",$event,$priority = 0,$description,$url="") {
+	public function add($application = "php-prowl-cli",$event,$priority,$description,$url) {
 		if (empty($this->api_key)) {
 			throw new Exception("No API key(s) set.");
 		}

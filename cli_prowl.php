@@ -33,13 +33,7 @@ $type = 1;
 	$prowl = new Prowl($prowl_user, $prowl_pass, $prowl_app);
 	
 	
-	#
-	# EVENT NAME = Name of your event, e.g. "Website down"
-	# DESCRIPTION = Description/body of notification 
-	#
-
-
-	$result = $prowl->send("$event", "$desc");
+	$result = $prowl->send("$event", "$priority", "$desc", "$url");
 	
 	#
 	# This just prints out the result of the notification. Simples.
