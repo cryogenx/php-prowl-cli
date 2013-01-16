@@ -1,6 +1,6 @@
 <?php
-$apikey = "6bd59454fd7aa50ddaedac5bd10811a7ce39bc21";
-$appname = "GWTEST";
+$apikey = "<<insert api key>>";
+$appname = "<appname>";
 
 $type = 1;		
 	if (isset($argv[1], $argv[2], $argv[3], $argv[4])){
