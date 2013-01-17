@@ -1,8 +1,11 @@
-php-prowl-cli
 
-Modified version of code here:
+DEPRECIATED: use code here: https://github.com/cryogenx/php-notify-cli
 
-Prowl: http://prowl.weks.net/
+    php-prowl-cli
+    
+    Modified version of code here:
+    
+    Prowl: http://prowl.weks.net/
 
 
 
